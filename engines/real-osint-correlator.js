@@ -245,20 +245,22 @@ export default class RealOSINTCorrelator {
     };
 
     // Correlate breach dates with social media activity
-    if (breachData.breaches && osintResults.socialPresence.activityTimeline) {
-      temporalCorr.breachActivityCorrelation = this.correlateBreachActivityWithSocial(
-        breachData.breaches,
-        osintResults.socialPresence.activityTimeline
-      );
-    }
+    // TODO: Implement correlateBreachActivityWithSocial method
+    // if (breachData.breaches && osintResults.socialPresence.activityTimeline) {
+    //   temporalCorr.breachActivityCorrelation = this.correlateBreachActivityWithSocial(
+    //     breachData.breaches,
+    //     osintResults.socialPresence.activityTimeline
+    //   );
+    // }
 
     // Analyze infrastructure changes around breach times
-    if (breachData.breaches && osintResults.technicalFootprint.domains) {
-      temporalCorr.infrastructureChanges = this.analyzeInfrastructureChanges(
-        breachData.breaches,
-        osintResults.technicalFootprint
-      );
-    }
+    // TODO: Implement analyzeInfrastructureChanges method
+    // if (breachData.breaches && osintResults.technicalFootprint.domains) {
+    //   temporalCorr.infrastructureChanges = this.analyzeInfrastructureChanges(
+    //     breachData.breaches,
+    //     osintResults.technicalFootprint
+    //   );
+    // }
 
     return temporalCorr;
   }
