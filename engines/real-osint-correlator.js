@@ -1,7 +1,7 @@
 // Real OSINT Data Correlator - Integrates multiple intelligence sources
 // Performs genuine cross-platform correlation and intelligence fusion
 
-import fetch from 'node-fetch';
+// Note: Using native fetch API (available in Node.js 18+)
 
 export default class RealOSINTCorrelator {
   constructor() {
