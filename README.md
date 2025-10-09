@@ -55,6 +55,10 @@ curl "https://strategic-intel.vercel.app/real?email=target@domain.com&depth=comp
 
 ## ⚙️ Configuration
 
+### Requirements:
+- **Node.js**: Version 18.0.0 or higher (native fetch API support)
+- **API Keys**: Required for accessing real breach databases and OSINT sources
+
 ### Environment Variables (Required for Real Data):
 
 ```bash

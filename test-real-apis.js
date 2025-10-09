@@ -1,5 +1,5 @@
 // Test real breach APIs with actual credentials
-import fetch from 'node-fetch';
+// Note: Using native fetch API (available in Node.js 18+)
 
 // API Keys from environment
 const HIBP_API_KEY = "897dc2bdbd814997a2cab80e237c0987";

@@ -1,7 +1,7 @@
 // Real Breach Data Collector - Connects to actual breach databases
 // Implements genuine OSINT intelligence gathering
 
-import fetch from 'node-fetch';
+// Note: Using native fetch API (available in Node.js 18+)
 
 export default class RealBreachCollector {
   constructor() {

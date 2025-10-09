@@ -13,9 +13,6 @@
     "deploy": "vercel --prod",
     "dev": "vercel dev"
   },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  },
   "engines": {
     "node": ">=18.0.0"
   },
