@@ -39,7 +39,7 @@ The `netlify.toml` file configures:
 ### Redirects/Routes
 All previous Vercel routes are preserved:
 - `/evolved` → `evolved-strategic-osint` function
-- `/real` → `real-breach-osint` function  
+- `/real` → `real-breach-osint` function
 - `/generation3`, `/generation6`, `/generation9` → `index` function with query parameters
 
 ## Deployment Steps
