@@ -245,7 +245,10 @@ export default class RealOSINTCorrelator {
     };
 
     // Correlate breach dates with social media activity
-    // TODO: Implement correlateBreachActivityWithSocial method
+    // TODO: Implement correlateBreachActivityWithSocial(breaches, activityTimeline)
+    //       Should correlate breach timestamps with social media activity patterns
+    //       Parameters: breaches (Array), activityTimeline (Object)
+    //       Returns: Object with correlation data showing temporal relationships
     // if (breachData.breaches && osintResults.socialPresence.activityTimeline) {
     //   temporalCorr.breachActivityCorrelation = this.correlateBreachActivityWithSocial(
     //     breachData.breaches,
@@ -254,7 +257,10 @@ export default class RealOSINTCorrelator {
     // }
 
     // Analyze infrastructure changes around breach times
-    // TODO: Implement analyzeInfrastructureChanges method
+    // TODO: Implement analyzeInfrastructureChanges(breaches, technicalFootprint)
+    //       Should analyze domain/IP changes that occurred around breach dates
+    //       Parameters: breaches (Array), technicalFootprint (Object with domains/IPs)
+    //       Returns: Object with infrastructure change analysis results
     // if (breachData.breaches && osintResults.technicalFootprint.domains) {
     //   temporalCorr.infrastructureChanges = this.analyzeInfrastructureChanges(
     //     breachData.breaches,
