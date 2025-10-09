@@ -1,4 +1,4 @@
-// Real Strategic OSINT API - Simplified version for Vercel deployment
+// Real Strategic OSINT API - Simplified version for Netlify deployment
 // Connects to actual breach databases with inline implementation
 
 export default async function handler(req, res) {

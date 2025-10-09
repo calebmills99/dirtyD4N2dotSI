@@ -1,0 +1,61 @@
+[build]
+  publish = "."
+  functions = "api"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = []
+
+[[redirects]]
+  from = "/evolved"
+  to = "/.netlify/functions/evolved-strategic-osint"
+  status = 200
+
+[[redirects]]
+  from = "/evolved-strategic"
+  to = "/.netlify/functions/evolved-strategic-osint"
+  status = 200
+
+[[redirects]]
+  from = "/api/evolved"
+  to = "/.netlify/functions/evolved-strategic-osint"
+  status = 200
+
+[[redirects]]
+  from = "/real"
+  to = "/.netlify/functions/real-breach-osint"
+  status = 200
+
+[[redirects]]
+  from = "/real-breach"
+  to = "/.netlify/functions/real-breach-osint"
+  status = 200
+
+[[redirects]]
+  from = "/api/real"
+  to = "/.netlify/functions/real-breach-osint"
+  status = 200
+
+[[redirects]]
+  from = "/generation3"
+  to = "/.netlify/functions/index?generation=3"
+  status = 200
+
+[[redirects]]
+  from = "/generation6"
+  to = "/.netlify/functions/index?generation=6"
+  status = 200
+
+[[redirects]]
+  from = "/generation9"
+  to = "/.netlify/functions/index?generation=9"
+  status = 200
+
+[functions."evolved-strategic-osint"]
+  node_bundler = "esbuild"
+
+[functions."real-breach-osint"]
+  node_bundler = "esbuild"
+
+[functions."index"]
+  node_bundler = "esbuild"

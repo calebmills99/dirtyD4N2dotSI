@@ -1,4 +1,4 @@
-// Strategic OSINT API - Standalone Version for Vercel
+// Strategic OSINT API - Standalone Version for Netlify
 // Includes all dependencies inline for reliable deployment
 
 export default async function handler(req, res) {
