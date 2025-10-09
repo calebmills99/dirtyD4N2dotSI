@@ -31,7 +31,7 @@ export default class RealOSINTCorrelator {
       },
       intelligence: {
         virustotal: { 
-          baseUrl: 'https://www.virustotal.com/vtapi/v2', 
+          baseUrl: 'https://www.virustotal.com/api/v3', 
           apiKey: process.env.VT_API_KEY,
           rateLimit: 1000 
         },
@@ -405,8 +405,14 @@ export default class RealOSINTCorrelator {
     const domain = email.split('@')[1];
     
     try {
+      // Updated to use VirusTotal API v3
       const response = await fetch(
-        `https://www.virustotal.com/vtapi/v2/domain/report?apikey=${this.osintSources.intelligence.virustotal.apiKey}&domain=${domain}`
+        `https://www.virustotal.com/api/v3/domains/${domain}`,
+        {
+          headers: {
+            'x-apikey': this.osintSources.intelligence.virustotal.apiKey
+          }
+        }
       );
 
       if (!response.ok) {
@@ -414,12 +420,14 @@ export default class RealOSINTCorrelator {
       }
 
       const data = await response.json();
+      const stats = data.data?.attributes?.last_analysis_stats || {};
       return {
-        positives: data.positives || 0,
-        total: data.total || 0,
-        scans: data.scans || {},
-        categories: data.categories || [],
-        resolutions: data.resolutions?.slice(0, 5) || []
+        malicious: stats.malicious || 0,
+        suspicious: stats.suspicious || 0,
+        harmless: stats.harmless || 0,
+        undetected: stats.undetected || 0,
+        categories: data.data?.attributes?.categories || {},
+        reputation: data.data?.attributes?.reputation || 0
       };
 
     } catch (error) {
