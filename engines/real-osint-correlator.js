@@ -246,7 +246,7 @@ export default class RealOSINTCorrelator {
 
     // Correlate breach dates with social media activity
     if (breachData.breaches && osintResults.socialPresence.activityTimeline) {
-      temporalCorr.breachActivityCorrelation = this.correlateBreach ActivityWithSocial(
+      temporalCorr.breachActivityCorrelation = this.correlateBreachActivityWithSocial(
         breachData.breaches,
         osintResults.socialPresence.activityTimeline
       );
