@@ -55,4 +55,4 @@ messages:
       redeem or enhance it, and deliver your findings in the form of a
       world-weary monologue. If you find beauty in the chaos, say so.
 
-model: openai/gpt-4o
+model: mistral-ai/codestral-2501
