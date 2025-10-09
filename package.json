@@ -10,8 +10,8 @@
     "analyze": "node engines/password-analyzer.js",
     "intelligence": "node engines/strategic-scorer.js",
     "build": "echo 'No build step required'",
-    "deploy": "vercel --prod",
-    "dev": "vercel dev"
+    "deploy": "netlify deploy --prod",
+    "dev": "netlify dev"
   },
   "engines": {
     "node": ">=18.0.0"

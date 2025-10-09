@@ -6,7 +6,7 @@ Advanced OSINT platform with empirical evolution, real breach data integration, 
 
 ## 🚀 Live Deployment
 
-**🌐 Production URL:** https://strategic-intel.vercel.app
+**🌐 Production URL:** https://strategic-intel.netlify.app
 
 ### Real Intelligence Endpoints:
 - **Real OSINT Analysis:** `/real` (connects to actual breach DBs)
@@ -40,10 +40,10 @@ Advanced OSINT platform with empirical evolution, real breach data integration, 
 
 ```bash
 # Real Strategic Intelligence Analysis
-curl "https://strategic-intel.vercel.app/real?email=danieloobregon23@gmail.com"
+curl "https://strategic-intel.netlify.app/real?email=danieloobregon23@gmail.com"
 
 # With depth control
-curl "https://strategic-intel.vercel.app/real?email=target@domain.com&depth=comprehensive"
+curl "https://strategic-intel.netlify.app/real?email=target@domain.com&depth=comprehensive"
 
 # Response includes:
 # - breachExposure: Real breach database results
